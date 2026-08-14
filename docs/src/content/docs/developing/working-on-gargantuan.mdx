@@ -12,9 +12,18 @@ Gargantuan works across most major operating systems, which include the latest v
 However, older OS versions may lack support for the libraries necessary for Gargantuan to run, and we do not guarantee support nor flawless installation for any of them.
 ## Prerequisites
 ### Windows
-- Windows 10 and/or 11
-- Vulkan SDK
-DirectX 12 will eventually be supported.
+#### WinGet CLI
+For dependendency management on Windows, this guide will use the WinGet CLI.
+
+**WinGet is usually already pre-installed on most Windows installations and editions.**
+To verify, type the following command into the terminal:
+```powershell
+winget --version
+```
+**WinGet must be available in order to proceed further into the guide.**
+<Aside type="caution">
+	If the command doesn't output anything, then check out the [WinGet CLI docs](https://github.com/microsoft/winget-cli#installing-the-client) for more information on how to install the WinGet CLI.
+</Aside>
 ### MacOS
 - MacOS 26 and XCode 26
 - Vulkan SDK IF you want to test Vulkan via MoltenVK
@@ -24,6 +33,7 @@ DirectX 12 will eventually be supported.
 ```
 brew install cmake ninja ccache
 ```
+
 ### Linux
 #### Vulkan
 For Gargantuan to output graphics, you'll first need a **Vulkan-capable GPU and a working driver for it.** 
