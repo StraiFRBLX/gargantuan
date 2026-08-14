@@ -24,6 +24,16 @@ winget --version
 <Aside type="caution">
 	If the command doesn't output anything, then check out the [WinGet CLI docs](https://github.com/microsoft/winget-cli#installing-the-client) for more information on how to install the WinGet CLI.
 </Aside>
+#### Vulkan
+For Gargantuan to output graphics, you'll first need a **Vulkan-capable GPU and a working driver for it.** 
+
+The installation steps for this vary with each system configuration, so this section assumes Vulkan is already properly configured.
+
+**Once that is done, install the Vulkan SDK with the following command:**
+```powershell
+winget install -e --id KhronosGroup.VulkanSDK
+```
+
 ### MacOS
 - MacOS 26 and XCode 26
 - Vulkan SDK IF you want to test Vulkan via MoltenVK
