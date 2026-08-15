@@ -4,6 +4,9 @@
 	"project_panel": {
 		"auto_fold_dirs": true,
 	},
+	"file_associations": {
+		"JSON": [".zed/settings.json"],
+	},
 	"languages": {
 		"Luau": {
 			"formatter": {
@@ -30,15 +33,23 @@
 		"luau-lsp": {
 			"settings": {
 				"roblox": {
-					// ts the same api SMH
 					"enabled": true,
-					"security_level": "plugin",
-					"download_api_documentation": true,
-					"download_definitions": true,
 				},
 				"fflags": {
 					"enable_new_solver": true,
 					"sync": true,
+				},
+				"luau-lsp": {
+					"ignoreGlobs": [".seal"],
+					"sourcemap": {
+						"enabled": false,
+					},
+					"types": {
+						"definitionFiles": {
+							"@seal": "./.seal/typedefs/globals.d.luau",
+						},
+						"documentationFiles": ["./.seal/typedefs/docs.json"],
+					},
 				},
 			},
 		},
